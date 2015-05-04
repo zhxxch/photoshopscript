@@ -1,3 +1,4 @@
+//TODO: Document
 LayerContainer = function(con){
     if(con.typename!="Document" && con.typename!="LayerSet")throw "Type error";
     this.container = con;
@@ -75,7 +76,8 @@ function $T(name){
     return res.textItem;
 }
 
-function CSVToArray( strData, strDelimiter ) {
+function CSVToArray( strData, strDelimiter ){
+    //FIXME: <cr> in last the line
     strDelimiter = (strDelimiter || ",");
     var objPattern = new RegExp(("(\\" + strDelimiter + "|\\r?\\n|\\r|^)" +"(?:\"([^\"]*(?:\"\"[^\"]*)*)\"|" +"([^\"\\" + strDelimiter + "\\r\\n]*))"),"gi");
     var arrData = [[]];
@@ -123,6 +125,7 @@ TempletDoc = function(docref){
     this.foldername = "";
     this.save = function(){
 //        alert(this.path+this.foldername+this.filename);
+//        TODO--First column as file name
         Folder(this.path + this.foldername).create();
         var f = File(this.path+"/"+this.foldername + this.filename+".psd");
         this.doc.saveAs(f, PhotoshopSaveOptions(), true);
@@ -130,6 +133,7 @@ TempletDoc = function(docref){
     this.data = [];
     this.keys = [];
     this.replace = function(){
+        //TODO--ImgObj replace
         for(var i in this.keys){
             $T(this.doc.name+"/"+this.keys[i]).contents = this.data[i];
 
