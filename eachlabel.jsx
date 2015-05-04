@@ -40,48 +40,7 @@ LayerContainer = function(con){
         }
     }
 }
-/*
-function _getLayerSet(container, path){
-    var res = container;
-    if(path.length == 0)return res;
-    for(var i in path){
-        try{
-            res = res.layerSets.getByName(path[i]);
-        }catch(err){
-            res = res.layerSets.add();
-            res.name = path[i];
-        }
-    }
-    return res;
-}
 
-function _getLayer(container, name){
-    var res;
-    try{
-        res = container.artLayers.getByName(name);
-    }catch(err){
-        return false;
-    }
-    return res;
-}
-
-function _searchLayer(container, name){
-    //container: Document or LayerSet
-    var res;
-    if(name == ""){
-        if(container.typename == "Document")return container.activeLayer;
-        else return container;
-    }
-    if((res = _getLayer(container, name))!=false)return res;
-    else{
-        if(container.layerSets.length > 0){
-            for(var i = 0; i<container.layerSets.length; i++){
-                if((res = _searchLayer(container.layerSets[i], name))!=false)return res;
-            }
-        }else return false;
-    }
-}
-*/
 function $D(name){
     if(arguments.length<1 ||!name)return app.activeDocument;
     var res;
