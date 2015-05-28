@@ -1,8 +1,10 @@
-/*  大型海报A4纸打印
-    __ |  \   /   __|        
-    /     /    |         
-    ___|  _/ _\ \___|       
-    */
+﻿/*  大型海报A4纸打印
+
+      __|   \   |   __|  \| |
+     |     /_\  |   _|   \  |
+    \___|_/  _\___|___|_| \_|
+                   2015-05-28
+*/
 #target photoshop
 app.bringToFront();
 var strtRulerUnits = app.preferences.rulerUnits;
