@@ -1,10 +1,10 @@
-﻿/*  大型海报A4纸打印
-
-      __|   \   |   __|  \| |
-     |     /_\  |   _|   \  |
-    \___|_/  _\___|___|_| \_|
-                   2015-05-28
-*/
+﻿/*
+ *  Copyright (c) 2015 X. ZHANG <201560039.uibe.edu.cn>
+ *
+ *       __ |  \   /   __|
+ *         /     /    |   
+ *       ___|  _/ _\ \___|
+ */
 #target photoshop
 app.bringToFront();
 var strtRulerUnits = app.preferences.rulerUnits;
